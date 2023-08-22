@@ -1,20 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import styled, { ThemeProvider } from "styled-components/native";
+import theme from "./components/utils/shopsmart-heading/theme";
+import ShopsmartHeading from "./components/utils/shopsmart-heading/shopsmartHeading";
+import Header from "./components/utils/header/header";
+// import { StatusBar } from "react-native";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ThemeProvider theme={theme}>
+      <Header />
+      {/* <StatusBar style="auto" /> */}
+      <ShopsmartHeading />
+    </ThemeProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
