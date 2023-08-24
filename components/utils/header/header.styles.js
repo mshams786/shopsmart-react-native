@@ -7,7 +7,6 @@ export const HeaderContainer = styled(View)`
   background-color: ${({ theme }) => theme.color.primary};
   border-bottom-right-radius: 40px;
   align-items: center;
-  /* padding-top: 10px; */
 `;
 
 export const ContentContainer = styled(View)`

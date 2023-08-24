@@ -2,9 +2,9 @@ import React from "react";
 import { HeadingContainer, Heading } from "./shopsmartHeading.styles";
 import { View } from "react-native";
 
-const ShopsmartHeading = () => {
+const ShopsmartHeading = ({ margin }) => {
   return (
-    <HeadingContainer>
+    <HeadingContainer margin={margin}>
       <Heading>ShopSamrt</Heading>
     </HeadingContainer>
   );

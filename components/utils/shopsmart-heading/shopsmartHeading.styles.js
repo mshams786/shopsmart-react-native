@@ -4,6 +4,7 @@ import { styled } from "styled-components";
 export const HeadingContainer = styled(View)`
   width: 100%;
   align-items: center;
+  margin: ${({ margin }) => margin || 0};
 `;
 
 export const Heading = styled(Text)`
