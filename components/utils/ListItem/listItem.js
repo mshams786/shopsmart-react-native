@@ -11,7 +11,7 @@ export default function ListItem({ cover, heading, paragraph, date, svgIcon }) {
                 <ImageText>
                     <ImageContainer>
 
-                        <ImageBackground source={require('../../../assets/images/product-3.jpg')} style={{ flex: 1, }} resizeMode='cover' />
+                        <ImageBackground source={cover} style={{ flex: 1, }} resizeMode='cover' />
 
 
                     </ImageContainer>
@@ -22,11 +22,9 @@ export default function ListItem({ cover, heading, paragraph, date, svgIcon }) {
                     </TextContainer>
                 </ImageText>
                 <DotSvgImage>
-                    <Svg width="5" height="21" viewBox="0 0 5 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <Ellipse cx="2.5" cy="10.165" rx="2.5" ry="2.34577" fill="#06919A" />
-                        <Ellipse cx="2.5" cy="17.9842" rx="2.5" ry="2.34577" fill="#06919A" />
-                        <Ellipse cx="2.5" cy="2.34577" rx="2.5" ry="2.34577" fill="#06919A" />
-                    </Svg>
+                    
+                       <Image source={svgIcon}/>
+                
                 </DotSvgImage>
 
             </AlignItems>
