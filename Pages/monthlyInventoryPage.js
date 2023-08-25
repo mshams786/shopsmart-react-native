@@ -6,12 +6,16 @@ import MonthlyListItem from '../components/Monthly-list-items/monthlyListItem'
 import SearchInput from '../components/utils/search-input/searchInput'
 
 export default function MonthlyInventoryPage() {
-   
+
   return (
     <View>
-    <SearchInput placeholder="Search Items" width="90%"/>
+      <View style={{marginTop:30 , display:'flex', left:40}}>
+        <SearchInput placeholder="Search your monthly list" width="60%" />
+      </View>
+      <View style={{marginTop:40}}>
       <MonthlyListItem/>
-      
+      </View>
+
     </View>
   )
 }
