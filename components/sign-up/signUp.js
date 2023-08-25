@@ -3,12 +3,14 @@ import { TextLines, SignupWrapper, MainContainer } from "./signUp.styles";
 import AuthHeader from "../utils/auth-rectangle/authHeader";
 import Input from "../utils/input/input";
 import Button from "../utils/button/button";
-import { Text } from "react-native";
+import { Text, View } from "react-native";
 
 const SignUp = () => {
   return (
     <SignupWrapper source={require("../../assets/images/home-bg.jpg")}>
+      {/* <View style={{ flex: 1, justifyContent: "flex-start" }}> */}
       <AuthHeader />
+      {/* </View> */}
       <MainContainer>
         <Input
           placeholder={"First Name"}

@@ -7,10 +7,11 @@ export const SignupWrapper = styled(ImageBackground)`
 `;
 export const MainContainer = styled(View)`
   width: 100%;
+  /* flex: 2; */
   justify-content: center;
   align-items: center;
   gap: 20px;
-  margin-top: 40px;
+  margin-top: 50px;
 `;
 export const TextLines = styled(Text)`
   font-size: 16px;

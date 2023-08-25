@@ -14,7 +14,9 @@ import { Text, View } from "react-native";
 const CustomerServices = () => {
   return (
     <CustomerWrapper>
+      {/* <View> */}
       <Header />
+      {/* </View> */}
       <ContainerMain>
         <Input
           width="300px"

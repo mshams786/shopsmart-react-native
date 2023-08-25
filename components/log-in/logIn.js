@@ -3,12 +3,14 @@ import { TextLine, BackgroundImage, Container } from "./logIn.styles";
 import AuthHeader from "../utils/auth-rectangle/authHeader";
 import Input from "../utils/input/input";
 import Button from "../utils/button/button";
-import { Text, View } from "react-native";
+import { Text, View, ViewBase } from "react-native";
 
 const LogIn = () => {
   return (
     <BackgroundImage source={require("../../assets/images/home-bg.jpg")}>
+      {/* <View style={{ flex: 1, justifyContent: "flex-start" }}> */}
       <AuthHeader />
+      {/* </View> */}
       <Container>
         <Input
           keyboardType="email"
@@ -18,21 +20,15 @@ const LogIn = () => {
         />
         <Input
           keyboardType="password"
+          secureTextEntry={true}
           placeholder=" Password..."
           width="260px"
           backgroundColor="#E4E4E6"
         />
-        {/* <View
-          style={{
-            width: "100%",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        > */}
+
         <Button width="130px" height="50px" bgColor="#06919A">
           Login
         </Button>
-        {/* </View> */}
         <TextLine>
           Already have an Account?
           <Text style={{ color: "#fff" }}> Sign In</Text>
