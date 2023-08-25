@@ -8,6 +8,7 @@ import ListView from "./components/utils/ListView/listView";
 import MonthlyInventoryPage from "./Pages/monthlyInventoryPage";
 
 import { StatusBar } from "react-native";
+import SearchInput from "./components/utils/search-input/searchInput";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
       
       <ShopsmartHeading />
       {/* <ListItem/> */}
+     
       <MonthlyInventoryPage/>
       
 
