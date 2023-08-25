@@ -9,6 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@react-navigation/native": "^6.1.7",
     "@react-navigation/stack": "^6.3.17",
     "expo": "~49.0.7",
@@ -16,6 +17,15 @@
     "react": "18.2.0",
     "react-native": "0.72.4",
     "react-native-svg": "13.9.0",
+=======
+    "@react-navigation/native": "react-navigation/native",
+    "expo": "~49.0.7",
+    "expo-status-bar": "~1.6.0",
+    "react": "18.2.0",
+    "react-native": "0.72.3",
+    "react-native-svg": "^13.12.0",
+    "react-native-vector-icons": "^10.0.0",
+>>>>>>> 4df607f01ffaf04a1a1094ff0fbed64e4bb67d0b
     "styled-components": "^6.0.7"
   },
   "devDependencies": {

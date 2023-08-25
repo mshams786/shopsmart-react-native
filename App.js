@@ -1,6 +1,7 @@
 import React from "react";
 
-import styled, { ThemeProvider } from "styled-components/native";
+import{ ThemeProvider } from "styled-components/native";
+
 import theme from "./theme";
 import ShopsmartHeading from "./components/utils/shopsmart-heading/shopsmartHeading";
 import Header from "./components/utils/header/header";
@@ -18,6 +19,7 @@ export default function App() {
       <ShopsmartHeading />
       {/* <ListItem/> */}
       <MonthlyInventoryPage />
+
     </ThemeProvider>
   );
 }
