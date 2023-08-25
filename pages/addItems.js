@@ -1,9 +1,7 @@
-import React from 'react';
+import React from "react";
 
 const AddItems = () => {
-    return (
-        
-    );
-}
- 
+  return <></>;
+};
+
 export default AddItems;

@@ -14,7 +14,7 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <Header />
-      {/* <StatusBar style="auto" /> */}
+      <StatusBar style="auto" />
       <ShopsmartHeading />
       {/* <ListItem/> */}
       <MonthlyInventoryPage />

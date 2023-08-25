@@ -22,7 +22,8 @@ export default function ListItem({ cover, heading, paragraph, date, svgIcon }) {
         <ImageText>
           <ImageContainer>
             <ImageBackground
-              source={require("../../../assets/images/product-3.jpg")}
+              //   source={require("../../../assets/images/product-3.jpg")}
+              source={cover}
               style={{ flex: 1 }}
               resizeMode="cover"
             />
