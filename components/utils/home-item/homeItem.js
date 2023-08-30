@@ -7,9 +7,9 @@ import {
   BackgroundImage,
 } from "./homeItem.styles";
 
-const HomeItem = ({ heading, path }) => {
+const HomeItem = ({ navigation, heading, path, route }) => {
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={() => navigation.navigate(route)}>
       <View>
         <ItemContainer>
           <ItemHeading>{heading}</ItemHeading>

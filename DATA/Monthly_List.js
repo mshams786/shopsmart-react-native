@@ -39,22 +39,6 @@ const monthlyListData = [
     date: "01/25/2022 ",
     // icon: DotsIcon,
   },
-  {
-    id: 6,
-    url: require("../assets/images/home-cover-1.jpg"),
-    heading: "June item list",
-    paragraph: "Grocery list",
-    date: "01/25/2022 ",
-    // icon: DotsIcon,
-  },
-  {
-    id: 7,
-    url: require("../assets/images/home-cover-1.jpg"),
-    heading: "July item list",
-    paragraph: "Grocery list",
-    date: "01/25/2022 ",
-    // icon: DotsIcon,
-  },
 ];
 
 export default monthlyListData;

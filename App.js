@@ -1,25 +1,31 @@
 import React from "react";
 
-import{ ThemeProvider } from "styled-components/native";
-
-import theme from "./theme";
-import ShopsmartHeading from "./components/utils/shopsmart-heading/shopsmartHeading";
-import Header from "./components/utils/header/header";
-import ListItem from "./components/utils/ListItem/listItem";
-import ListView from "./components/utils/ListView/listView";
-import MonthlyInventoryPage from "./pages/monthlyInventoryPage";
-
+import { ThemeProvider } from "styled-components/native";
 import { StatusBar } from "react-native";
 
-export default function App() {
-  return (
-    <ThemeProvider theme={theme}>
-      <Header />
-      <StatusBar style="auto" />
-      <ShopsmartHeading />
-      {/* <ListItem/> */}
-      <MonthlyInventoryPage />
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { NavigationContainer } from "@react-navigation/native";
 
-    </ThemeProvider>
+import theme from "./theme";
+import HomePage from "./pages/homePage";
+import AddItems from "./pages/addItems";
+import MonthlyInventoryPage from "./pages/monthlyInventoryPage";
+
+const Stack = createNativeStackNavigator();
+
+const App = () => {
+  return (
+    <NavigationContainer>
+      <ThemeProvider theme={theme}>
+        <StatusBar style="auto" />
+        <Stack.Navigator initialRouteName="Home">
+          <Stack.Screen name="Home" component={HomePage} />
+          <Stack.Screen name="Add Items" component={AddItems} />
+          <Stack.Screen name="My-Items" component={MonthlyInventoryPage} />
+        </Stack.Navigator>
+      </ThemeProvider>
+    </NavigationContainer>
   );
-}
+};
+
+export default App;

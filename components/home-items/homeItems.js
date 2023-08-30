@@ -3,12 +3,18 @@ import HomeData from "../../DATA/HOME_DATA";
 import { FlatList, ScrollView, View } from "react-native";
 import HomeItem from "../utils/home-item/homeItem";
 import GridView from "../utils/grid-view/gridView";
-const HomeItems = () => {
+const HomeItems = ({ navigation }) => {
   return (
     <GridView>
       {/* <View style={{ backgroundColor: "red" }}> */}
       {HomeData.map((item) => (
-        <HomeItem key={item.id} heading={item.name} path={item.imgURL} />
+        <HomeItem
+          key={item.id}
+          heading={item.name}
+          path={item.imgURL}
+          route={item.route}
+          navigation={navigation}
+        />
       ))}
       {/* </View> */}
 
