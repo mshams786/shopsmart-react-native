@@ -15,8 +15,7 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <Header />
       <StatusBar style="auto" />
-      <MonthlyInventoryPage/>
-
+      <MonthlyInventoryPage />
     </ThemeProvider>
   );
 }
