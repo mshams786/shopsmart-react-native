@@ -14,6 +14,8 @@ const SearchInput = ({
   borderRadius,
 }) => {
   return (
+
+
     <SearchInputContainer
       fontWeight={fontWeight}
       placeholder={placeholder}
@@ -22,6 +24,7 @@ const SearchInput = ({
       fontSize={fontSize}
       borderRadius={borderRadius}
     >
+
       <IconStyling>
         <Svg
           xmlns="http://www.w3.org/2000/svg"

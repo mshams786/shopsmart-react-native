@@ -13,6 +13,7 @@ import {
 import { Svg, Ellipse } from "react-native-svg";
 
 export default function ListItem({ cover, heading, paragraph, date, svgIcon }) {
+<<<<<<< HEAD
   return (
     <MainListWrapper>
       <AlignItems>
@@ -64,4 +65,35 @@ export default function ListItem({ cover, heading, paragraph, date, svgIcon }) {
       </AlignItems>
     </MainListWrapper>
   );
+=======
+    return (
+
+        <MainListWrapper>
+            <AlignItems>
+                <ImageText>
+                    <ImageContainer>
+
+                        <ImageBackground source={cover} style={{ flex: 1, }} resizeMode='cover' />
+
+
+                    </ImageContainer>
+                    <TextContainer>
+                        <Text1>{heading}</Text1>
+                        <Text2>{paragraph}</Text2>
+                        <Text2>{date}</Text2>
+                    </TextContainer>
+                </ImageText>
+                <DotSvgImage>
+                    
+                       <Image source={svgIcon}/>
+                
+                </DotSvgImage>
+
+            </AlignItems>
+        </MainListWrapper>
+
+
+
+    )
+>>>>>>> a1375b54a02340d8cdc43c50d76bda62e2d82409
 }
