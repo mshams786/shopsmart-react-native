@@ -3,7 +3,7 @@ import ListView from '../utils/ListView/listView'
 import monthlyListData from '../../DATA/Monthly_List'
 import ListItem from '../utils/ListItem/listItem'
 
-export default function MonthlyListItem() {
+export default function monthlyListItems() {
 console.log(monthlyListData)
   return (
    <ListView>
