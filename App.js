@@ -18,13 +18,13 @@ const App = () => {
     <NavigationContainer>
       <ThemeProvider theme={theme}>
         <StatusBar style="auto" />
-        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-          <Stack.Navigator initialRouteName="Home">
-            <Stack.Screen name="Home" component={HomePage} />
-            <Stack.Screen name="Add Items" component={AddItems} />
-            <Stack.Screen name="My-Items" component={MonthlyInventoryPage} />
-          </Stack.Navigator>
-        </TouchableWithoutFeedback>
+        {/* <TouchableWithoutFeedback onPress={Keyboard.dismiss}> */}
+        <Stack.Navigator initialRouteName="Home">
+          <Stack.Screen name="Home" component={HomePage} />
+          <Stack.Screen name="Add Items" component={AddItems} />
+          <Stack.Screen name="My-Items" component={MonthlyInventoryPage} />
+        </Stack.Navigator>
+        {/* </TouchableWithoutFeedback> */}
       </ThemeProvider>
     </NavigationContainer>
   );
