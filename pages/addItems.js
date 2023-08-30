@@ -10,7 +10,7 @@ import { TouchableWithoutFeedback, Keyboard } from "react-native";
 const AddItems = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <ShopsmartHeading margin="30px 0 0" />
       <ScannedItemsList />
     </>

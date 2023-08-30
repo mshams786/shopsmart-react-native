@@ -6,7 +6,7 @@ import HomeItems from "../components/home-items/homeItems";
 const HomePage = ({ navigation }) => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <ShopsmartHeading margin="40px 0" />
       <HomeItems navigation={navigation} />
     </>

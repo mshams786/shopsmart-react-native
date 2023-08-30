@@ -1,7 +1,7 @@
 import React from "react";
 
 import { ThemeProvider } from "styled-components/native";
-import { StatusBar } from "react-native";
+import { StatusBar, TouchableWithoutFeedback, Keyboard } from "react-native";
 
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
@@ -18,11 +18,13 @@ const App = () => {
     <NavigationContainer>
       <ThemeProvider theme={theme}>
         <StatusBar style="auto" />
-        <Stack.Navigator initialRouteName="Home">
-          <Stack.Screen name="Home" component={HomePage} />
-          <Stack.Screen name="Add Items" component={AddItems} />
-          <Stack.Screen name="My-Items" component={MonthlyInventoryPage} />
-        </Stack.Navigator>
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+          <Stack.Navigator initialRouteName="Home">
+            <Stack.Screen name="Home" component={HomePage} />
+            <Stack.Screen name="Add Items" component={AddItems} />
+            <Stack.Screen name="My-Items" component={MonthlyInventoryPage} />
+          </Stack.Navigator>
+        </TouchableWithoutFeedback>
       </ThemeProvider>
     </NavigationContainer>
   );
