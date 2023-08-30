@@ -3,9 +3,9 @@ import { TextLines, SignupWrapper, MainContainer } from "./signUp.styles";
 import AuthHeader from "../utils/auth-rectangle/authHeader";
 import Input from "../utils/input/input";
 import Button from "../utils/button/button";
-import { Text, View } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 
-const SignUp = () => {
+const SignUp = ({ handSwitch }) => {
   return (
     <SignupWrapper source={require("../../assets/images/home-bg.jpg")}>
       {/* <View style={{ flex: 1, justifyContent: "flex-start" }}> */}
@@ -17,29 +17,35 @@ const SignUp = () => {
           keyboardType={"text"}
           width="260px"
           backgroundColor="#E4E4E6"
+          name={"first-name"}
         />
         <Input
           placeholder={"Username"}
           backgroundColor="#E4E4E6"
           keyboardType={"text"}
           width="260px"
+          name={"username"}
         />
         <Input
           placeholder={"Email"}
-          keyboardType={"email"}
+          keyboardType={"email-address"}
           backgroundColor="#E4E4E6"
           width="260px"
+          name={"email"}
         />
         <Input
           placeholder={"Password"}
-          keyboardType={"password"}
+          secureTextEntry={true}
+          name={"password"}
           width="260px"
           backgroundColor="#E4E4E6"
         />
         <Button>Signup</Button>
         <TextLines>
           Already have an Account?
-          <Text style={{ color: "#fff" }}> Sign In</Text>
+          <Text style={{ color: "#fff" }} onPress={handSwitch}>
+            Sign In
+          </Text>
         </TextLines>
       </MainContainer>
     </SignupWrapper>

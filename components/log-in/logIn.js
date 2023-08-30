@@ -3,9 +3,9 @@ import { TextLine, BackgroundImage, Container } from "./logIn.styles";
 import AuthHeader from "../utils/auth-rectangle/authHeader";
 import Input from "../utils/input/input";
 import Button from "../utils/button/button";
-import { Text, View, ViewBase } from "react-native";
+import { Text, TouchableOpacity, View, ViewBase } from "react-native";
 
-const LogIn = () => {
+const LogIn = ({ handSwitch }) => {
   return (
     <BackgroundImage source={require("../../assets/images/home-bg.jpg")}>
       {/* <View style={{ flex: 1, justifyContent: "flex-start" }}> */}
@@ -31,7 +31,9 @@ const LogIn = () => {
         </Button>
         <TextLine>
           Already have an Account?
-          <Text style={{ color: "#fff" }}> Sign In</Text>
+          <Text style={{ color: "#fff" }} onPress={handSwitch}>
+            Sign In
+          </Text>
         </TextLine>
       </Container>
     </BackgroundImage>

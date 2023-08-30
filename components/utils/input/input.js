@@ -7,6 +7,8 @@ const Input = ({
   backgroundColor,
   keyboardType,
   width,
+  name,
+  secureTextEntry,
 }) => {
   return (
     <View>
@@ -16,6 +18,8 @@ const Input = ({
         value={value}
         backgroundColor={backgroundColor}
         keyboardType={keyboardType}
+        name={name}
+        secureTextEntry={secureTextEntry}
       />
     </View>
   );

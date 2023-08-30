@@ -7,14 +7,16 @@ import LogIn from "./components/log-in/logIn";
 import SignUp from "./components/sign-up/signUp";
 import CustomerServices from "./pages/customerServices";
 import { StatusBar } from "react-native";
+import LoginSignup from "./pages/loginSignup";
 
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
+      <LoginSignup/>
       {/* <Header /> */}
       {/* <LogIn /> */}
       {/* <SignUp /> */}
-      <CustomerServices />
+      {/* <CustomerServices /> */}
       <StatusBar style="auto" />
       {/* <ShopsmartHeading /> */}
     </ThemeProvider>
