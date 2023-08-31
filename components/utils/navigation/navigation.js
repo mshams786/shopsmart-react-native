@@ -3,7 +3,10 @@ import { Text, View } from "react-native";
 import { NavigationWrapper } from "./navigation.styles";
 import { Path, Svg, TextPath } from "react-native-svg";
 
-const Navigation = () => {
+const Navigation = ({ navigation }) => {
+  const handleCustomerServices = () => {
+    navigation.navigate("Customer-Services");
+  };
   return (
     <NavigationWrapper>
       <Svg

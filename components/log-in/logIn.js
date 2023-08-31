@@ -6,10 +6,11 @@ import Button from "../utils/button/button";
 import { Text } from "react-native";
 import { Formik } from "formik";
 import { object, string } from "yup";
+import { View } from "react-native";
 
 const loginSchema = object({
   email: string()
-    .email("email must hav @ and .")
+    .email("email must have @ and .")
     .required("Please enter your email"),
   password: string()
     .required("Password must be required")
@@ -36,31 +37,33 @@ const LogIn = ({ handleSwitch, handleLogin }) => {
           <AuthHeader />
           {/* </View> */}
           <Container>
-            <Input
-              placeholder="Enter your Email..."
-              width="260px"
-              backgroundColor="#E4E4E6"
-              onChangeText={handleChange("email")}
-              onBlur={handleBlur("email")}
-              value={values.email}
-            />
-            {errors.email && touched.email && (
-              <Text style={{ color: "red" }}>{errors.email}</Text>
-            )}
-
-            <Input
-              secureTextEntry={true}
-              placeholder=" Password..."
-              width="260px"
-              backgroundColor="#E4E4E6"
-              onChangeText={handleChange("password")}
-              onBlur={handleBlur("password")}
-              value={values.password}
-            />
-            {errors.password && touched.password && (
-              <Text style={{ color: "red" }}>{errors.password}</Text>
-            )}
-
+            <View>
+              <Input
+                placeholder="Enter your Email..."
+                width="260px"
+                backgroundColor="#E4E4E6"
+                onChangeText={handleChange("email")}
+                onBlur={handleBlur("email")}
+                value={values.email}
+              />
+              {errors.email && touched.email && (
+                <Text style={{ color: "red" }}>{errors.email}</Text>
+              )}
+            </View>
+            <View>
+              <Input
+                secureTextEntry={true}
+                placeholder=" Password..."
+                width="260px"
+                backgroundColor="#E4E4E6"
+                onChangeText={handleChange("password")}
+                onBlur={handleBlur("password")}
+                value={values.password}
+              />
+              {errors.password && touched.password && (
+                <Text style={{ color: "red" }}>{errors.password}</Text>
+              )}
+            </View>
             <Button
               width="130px"
               height="50px"

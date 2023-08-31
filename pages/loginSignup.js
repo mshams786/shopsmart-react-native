@@ -18,9 +18,9 @@ const LoginSignup = ({ navigation }) => {
   return (
     <Container>
       {isLoginVisible ? (
-        <LogIn handSwitch={handSwitch} handleLogin={handleLogin} />
+        <LogIn handleSwitch={handleSwitch} handleLogin={handleLogin} />
       ) : (
-        <SignUp handSwitch={handSwitch} handleLogin={handleLogin} />
+        <SignUp handleSwitch={handleSwitch} handleLogin={handleLogin} />
       )}
     </Container>
   );
@@ -32,8 +32,4 @@ const Container = styled.View`
   overflow: hidden;
 `;
 
-// const ContentContainer = styled(Animated.View)`
-//   width: 200%;
-//   height: 100%;
-// `;
 export default LoginSignup;
