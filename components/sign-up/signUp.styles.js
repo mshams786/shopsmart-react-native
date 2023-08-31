@@ -17,3 +17,7 @@ export const TextLines = styled(Text)`
   font-size: 16px;
   font-weight: 500px;
 `;
+export const ErrorMassage = styled(Text)`
+  margin: 0;
+  padding: 0;
+`;

@@ -3,7 +3,11 @@ import { AreaInput, TextAreaContainer } from "./textArea.styles";
 const TextArea = ({ placeholder, keyboardType }) => {
   return (
     <TextAreaContainer>
-      <AreaInput placeholder={placeholder} keyboardType={keyboardType} />
+      <AreaInput
+        placeholder={placeholder}
+        keyboardType={keyboardType}
+        numberOfLines={4}
+      />
     </TextAreaContainer>
   );
 };

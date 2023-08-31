@@ -12,7 +12,7 @@ import LoginSignup from "./pages/loginSignup";
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
-      <LoginSignup/>
+      <LoginSignup />
       {/* <Header /> */}
       {/* <LogIn /> */}
       {/* <SignUp /> */}

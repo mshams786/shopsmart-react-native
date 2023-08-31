@@ -9,6 +9,10 @@ const Input = ({
   width,
   name,
   secureTextEntry,
+  onChangeText,
+  onBlur,
+  id,
+  onChange,
 }) => {
   return (
     <View>
@@ -20,6 +24,10 @@ const Input = ({
         keyboardType={keyboardType}
         name={name}
         secureTextEntry={secureTextEntry}
+        onChangeText={onChangeText}
+        onChange={onChange}
+        onBlur={onBlur}
+        id={id}
       />
     </View>
   );

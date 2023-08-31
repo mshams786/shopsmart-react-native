@@ -19,7 +19,7 @@ const LoginSignup = () => {
   //   setLoginVisible(!isLoginVisible);
   // };
 
-  const handSwitch = () => {
+  const handleSwitch = () => {
     return setLoginVisible(!isLoginVisible);
   };
 
@@ -27,9 +27,9 @@ const LoginSignup = () => {
     <Container>
       {/* <ContentContainer style={{ transform: [{ translateX: translateX }] }}> */}
       {isLoginVisible ? (
-        <LogIn handSwitch={handSwitch} />
+        <LogIn handleSwitch={handleSwitch} />
       ) : (
-        <SignUp handSwitch={handSwitch} />
+        <SignUp handleSwitch={handleSwitch} />
       )}
       {/* </ContentContainer> */}
     </Container>
@@ -42,8 +42,8 @@ const Container = styled.View`
   overflow: hidden;
 `;
 
-const ContentContainer = styled(Animated.View)`
-  width: 200%;
-  height: 100%;
-`;
+// const ContentContainer = styled(Animated.View)`
+//   width: 200%;
+//   height: 100%;
+// `;
 export default LoginSignup;
