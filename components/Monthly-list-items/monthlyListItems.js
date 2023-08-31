@@ -10,6 +10,7 @@ const MonthlyListItems = () => {
     <ListView>
       {monthlyListData.map((item) => (
         <ListItem
+          key={item.id}
           cover={item.url}
           heading={item.heading}
           paragraph={item.paragraph}

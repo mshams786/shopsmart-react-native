@@ -4,34 +4,24 @@ import { styled } from "styled-components/native"; // Update the import path for
 import LogIn from "../components/log-in/logIn";
 import SignUp from "../components/sign-up/signUp";
 
-const LoginSignup = () => {
+const LoginSignup = ({ navigation }) => {
   const [isLoginVisible, setLoginVisible] = useState(false);
-  // const translateX = new Animated.Value(0);
-
-  // const toggleAnimation = () => {
-  //   const newValue = isLoginVisible ? 0 : -200;
-  //   Animated.timing(translateX, {
-  //     toValue: newValue,
-  //     duration: 500,
-  //     easing: Easing.inOut(Easing.ease),
-  //     useNativeDriver: true, // Make sure to use the native driver for performance
-  //   }).start();
-  //   setLoginVisible(!isLoginVisible);
-  // };
 
   const handSwitch = () => {
     return setLoginVisible(!isLoginVisible);
   };
 
+  const handleLogin = () => {
+    navigation.navigate("Home");
+  };
+
   return (
     <Container>
-      {/* <ContentContainer style={{ transform: [{ translateX: translateX }] }}> */}
       {isLoginVisible ? (
-        <LogIn handSwitch={handSwitch} />
+        <LogIn handSwitch={handSwitch} handleLogin={handleLogin} />
       ) : (
-        <SignUp handSwitch={handSwitch} />
+        <SignUp handSwitch={handSwitch} handleLogin={handleLogin} />
       )}
-      {/* </ContentContainer> */}
     </Container>
   );
 };

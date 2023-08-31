@@ -10,6 +10,8 @@ import theme from "./theme";
 import HomePage from "./pages/homePage";
 import AddItems from "./pages/addItems";
 import MonthlyInventoryPage from "./pages/monthlyInventoryPage";
+import LoginSignup from "./pages/loginSignup";
+import CustomerServices from "./pages/customerServices";
 
 const Stack = createNativeStackNavigator();
 
@@ -18,13 +20,12 @@ const App = () => {
     <NavigationContainer>
       <ThemeProvider theme={theme}>
         <StatusBar style="auto" />
-        {/* <TouchableWithoutFeedback onPress={Keyboard.dismiss}> */}
-        <Stack.Navigator initialRouteName="Home">
+        <Stack.Navigator initialRouteName="Auth">
+          <Stack.Screen name="Auth" component={LoginSignup} />
           <Stack.Screen name="Home" component={HomePage} />
           <Stack.Screen name="Add Items" component={AddItems} />
           <Stack.Screen name="My-Items" component={MonthlyInventoryPage} />
         </Stack.Navigator>
-        {/* </TouchableWithoutFeedback> */}
       </ThemeProvider>
     </NavigationContainer>
   );

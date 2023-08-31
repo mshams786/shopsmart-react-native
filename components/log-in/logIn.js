@@ -5,7 +5,7 @@ import Input from "../utils/input/input";
 import Button from "../utils/button/button";
 import { Text, TouchableOpacity, View, ViewBase } from "react-native";
 
-const LogIn = ({ handSwitch }) => {
+const LogIn = ({ handSwitch, handleLogin }) => {
   return (
     <BackgroundImage source={require("../../assets/images/home-bg.jpg")}>
       {/* <View style={{ flex: 1, justifyContent: "flex-start" }}> */}
@@ -13,20 +13,25 @@ const LogIn = ({ handSwitch }) => {
       {/* </View> */}
       <Container>
         <Input
-          keyboardType="email"
+          // keyboardType="email"
           placeholder="Enter your Email..."
           width="260px"
           backgroundColor="#E4E4E6"
         />
         <Input
-          keyboardType="password"
+          // keyboardType="password"
           secureTextEntry={true}
           placeholder=" Password..."
           width="260px"
           backgroundColor="#E4E4E6"
         />
 
-        <Button width="130px" height="50px" bgColor="#06919A">
+        <Button
+          onPress={handleLogin}
+          width="130px"
+          height="50px"
+          bgColor="#06919A"
+        >
           Login
         </Button>
         <TextLine>
