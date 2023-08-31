@@ -12,13 +12,13 @@ const theme = {
   typography: {
     fontFamily: "Inter, Sans-serif",
     fontSize: {
-      xxs: "1.2rem",
-      xs: "1.4rem",
-      sm: "1.6rem",
-      md: "2rem",
-      lg: "2.4rem",
-      xl: "2.8rem",
-      xxl: "3.2rem",
+      xxs: "12px",
+      xs: "14px",
+      sm: "16px",
+      md: "24px",
+      lg: "28px",
+      xl: "32px",
+      xxl: "38x",
     },
     fontWeight: {
       thin: 100,
@@ -32,14 +32,14 @@ const theme = {
     },
   },
   spacing: {
-    none: "0",
-    xxs: ".4rem",
-    xs: ".8rem",
-    sm: "1.6rem",
-    md: "2.4rem",
-    lg: "3.2rem",
-    xl: "4.8rem",
-    xxl: "6.4rem",
+    none: "0px",
+    xxs: "5px",
+    xs: "8px",
+    sm: "16px",
+    md: "28px",
+    lg: "38px",
+    xl: "56px",
+    xxl: "76px",
   },
 };
 

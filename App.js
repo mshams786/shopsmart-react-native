@@ -1,24 +1,35 @@
 import React from "react";
-import styled, { ThemeProvider } from "styled-components/native";
-import theme from "./components/utils/shopsmart-heading/theme";
-import ShopsmartHeading from "./components/utils/shopsmart-heading/shopsmartHeading";
-import Header from "./components/utils/header/header";
-import LogIn from "./components/log-in/logIn";
-import SignUp from "./components/sign-up/signUp";
-import CustomerServices from "./pages/customerServices";
-import { StatusBar } from "react-native";
-import LoginSignup from "./pages/loginSignup";
 
-export default function App() {
+import { ThemeProvider } from "styled-components/native";
+import { StatusBar, TouchableWithoutFeedback, Keyboard } from "react-native";
+
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { NavigationContainer } from "@react-navigation/native";
+
+import theme from "./theme";
+import HomePage from "./pages/homePage";
+import AddItems from "./pages/addItems";
+import MonthlyInventoryPage from "./pages/monthlyInventoryPage";
+import LoginSignup from "./pages/loginSignup";
+import CustomerServices from "./pages/customerServices";
+
+const Stack = createNativeStackNavigator();
+
+const App = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <LoginSignup />
-      {/* <Header /> */}
-      {/* <LogIn /> */}
-      {/* <SignUp /> */}
-      {/* <CustomerServices /> */}
-      <StatusBar style="auto" />
-      {/* <ShopsmartHeading /> */}
-    </ThemeProvider>
+
+    <NavigationContainer>
+      <ThemeProvider theme={theme}>
+        <StatusBar style="auto" />
+        <Stack.Navigator initialRouteName="Auth">
+          <Stack.Screen name="Auth" component={LoginSignup} />
+          <Stack.Screen name="Home" component={HomePage} />
+          <Stack.Screen name="Add Items" component={AddItems} />
+          <Stack.Screen name="My-Items" component={MonthlyInventoryPage} />
+        </Stack.Navigator>
+      </ThemeProvider>
+    </NavigationContainer>
   );
-}
+};
+
+export default App;

@@ -15,7 +15,7 @@ const loginSchema = object({
     .required("Password must be required")
     .min(8, "At least one Uppercase, at least 8 characters"),
 });
-const LogIn = ({ handleSwitch }) => {
+const LogIn = ({ handleSwitch, handleLogin }) => {
   return (
     <Formik
       initialValues={{ email: "", password: "" }}
@@ -65,7 +65,7 @@ const LogIn = ({ handleSwitch }) => {
               width="130px"
               height="50px"
               bgColor="#06919A"
-              onPress={handleSubmit}
+              onPress={handleLogin}
             >
               Login
             </Button>

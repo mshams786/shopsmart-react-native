@@ -13,6 +13,7 @@ import { Formik } from "formik";
 import { object, string } from "yup";
 import { yup } from "yup";
 
+
 const signupSchema = object({
   fullName: string().required("Please enter your name"),
   email: string()
@@ -24,7 +25,7 @@ const signupSchema = object({
     .min(8, "At least one Uppercase, at least 8 characters"),
 });
 
-const SignUp = ({ handleSwitch }) => {
+const SignUp = ({ handleSwitch , handleLogin}) => {
   return (
     <Formik
       initialValues={{ fullName: "", userName: "", email: "", password: "" }}
@@ -106,7 +107,7 @@ const SignUp = ({ handleSwitch }) => {
                   {errors.password}
                 </ErrorMassage>
               )}
-              <Button onPress={handleSubmit}>Signup</Button>
+              <Button onPress={handleLogin}>Signup</Button>
               <TextLines>
                 Already have an Account?
                 <Text style={{ color: "#fff" }} onPress={handleSwitch}>
@@ -118,6 +119,7 @@ const SignUp = ({ handleSwitch }) => {
         </View>
       )}
     </Formik>
+
   );
 };
 
