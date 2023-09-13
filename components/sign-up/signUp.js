@@ -23,7 +23,7 @@ const signupSchema = object({
     .min(8, "At least one Uppercase, at least 8 characters"),
 });
 
-const SignUp = ({ handleSwitch, handleLogin }) => {
+const SignUp = ({ handleSwitch }) => {
   return (
     <Formik
       initialValues={{ fullName: "", userName: "", email: "", password: "" }}
@@ -113,12 +113,12 @@ const SignUp = ({ handleSwitch, handleLogin }) => {
                   </ErrorMassage>
                 )}
               </View>
-              <Button onPress={handleLogin}>Signup</Button>
+              <Button>Signup</Button>
               <TextLines>
                 Already have an Account?
-                <Text style={{ color: "#fff" }} onPress={handleSwitch}>
-                  Sign In
-                </Text>
+                <TouchableOpacity onPress={handleSwitch}>
+                  <Text style={{ color: "#fff" }}>Sign In</Text>
+                </TouchableOpacity>
               </TextLines>
             </MainContainer>
           </SignupWrapper>

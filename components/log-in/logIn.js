@@ -3,7 +3,7 @@ import { TextLine, BackgroundImage, Container } from "./logIn.styles";
 import AuthHeader from "../utils/auth-rectangle/authHeader";
 import Input from "../utils/input/input";
 import Button from "../utils/button/button";
-import { Text } from "react-native";
+import { Text, TouchableOpacity } from "react-native";
 import { Formik } from "formik";
 import { object, string } from "yup";
 import { View } from "react-native";
@@ -16,7 +16,7 @@ const loginSchema = object({
     .required("Password must be required")
     .min(8, "At least one Uppercase, at least 8 characters"),
 });
-const LogIn = ({ handleSwitch, handleLogin }) => {
+const LogIn = ({ handleSwitch }) => {
   return (
     <Formik
       initialValues={{ email: "", password: "" }}
@@ -68,15 +68,15 @@ const LogIn = ({ handleSwitch, handleLogin }) => {
               width="130px"
               height="50px"
               bgColor="#06919A"
-              onPress={handleLogin}
+              // onPress={handleLogin}
             >
               Login
             </Button>
             <TextLine>
               Already have an Account?
-              <Text style={{ color: "#fff" }} onPress={handleSwitch}>
-                Sign In
-              </Text>
+              <TouchableOpacity onPress={handleSwitch}>
+                <Text style={{ color: "#fff" }}>Sign In</Text>
+              </TouchableOpacity>
             </TextLine>
           </Container>
         </BackgroundImage>
