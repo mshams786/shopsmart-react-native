@@ -1,34 +1,50 @@
 const SettingData = [
   {
-    title: "Account settings",
-    data: [{ id: 1, title: "Basic info" }],
+    heading: "Account settings",
+    options: ["Basic info"],
   },
 
   {
-    title: "Notification",
-    data: [
-      { id: 2, title: "Email & phone" },
-      { id: 3, title: "Push Notification" },
-    ],
+    heading: "Notification",
+    options: ["Email & phone", "Push Notification"],
   },
 
   {
-    title: "Contact Us",
-    data: [{ id: 4, title: "Help & Centre" }],
+    heading: "Contact Us",
+    options: ["Help & Centre"],
   },
 
+  // {
+  //   heading: "Legal",
+  //   options: [
+  //     "Privacy Policy",
+  //     "Term of Services",
+  //     "Licence",
+  //     "Restore Purchaces",
+  //   ],
+  // },
+  // {
+  //   heading: "Legal",
+  //   options: [
+  //     "Privacy Policy",
+  //     "Term of Services",
+  //     "Licence",
+  //     "Restore Purchaces",
+  //   ],
+  // },
+  // {
+  //   heading: "Legal",
+  //   options: [
+  //     "Privacy Policy",
+  //     "Term of Services",
+  //     "Licence",
+  //     "Restore Purchaces",
+  //   ],
+  // },
+
   {
-    title: "Legal",
-    data: [
-      { id: 5, title: "Privacy Policy" },
-      { id: 6, title: "Term of Services" },
-      { id: 7, title: "Licence" },
-      { id: 8, title: "Restore Purchaces" },
-    ],
-  },
-  {
-    title: "Software",
-    data: [{ id: 9, title: "Update" }],
+    heading: "Software",
+    options: ["Update"],
   },
 ];
 

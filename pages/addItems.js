@@ -7,10 +7,10 @@ import ScannedItemsList from "../components/scaned-items-list/scannedItemsList";
 import { NavigationContainer } from "@react-navigation/native";
 import { TouchableWithoutFeedback, Keyboard } from "react-native";
 
-const AddItems = () => {
+const AddItems = ({ navigation }) => {
   return (
     <>
-      {/* <Header /> */}
+      <Header navigation={navigation} />
       <ShopsmartHeading margin="30px 0 0" />
       <ScannedItemsList />
     </>

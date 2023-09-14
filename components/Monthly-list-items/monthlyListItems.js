@@ -2,10 +2,10 @@ import React from "react";
 import ListView from "../utils/ListView/listView";
 import monthlyListData from "../../DATA/Monthly_List";
 import ListItem from "../utils/ListItem/listItem";
+import { OptionsIcon } from "./monthlyListItems.styles";
 
 const MonthlyListItems = () => {
-  console.log(monthlyListData);
-
+  const svgIcon = <OptionsIcon name="options-vertical" size={24} />;
   return (
     <ListView>
       {monthlyListData.map((item) => (
@@ -15,6 +15,7 @@ const MonthlyListItems = () => {
           heading={item.heading}
           paragraph={item.paragraph}
           date={item.date}
+          svgIcon={svgIcon}
         />
       ))}
     </ListView>

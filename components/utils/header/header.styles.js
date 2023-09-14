@@ -3,7 +3,7 @@ import { View } from "react-native";
 
 export const HeaderContainer = styled(View)`
   width: 100%;
-  height: 10%;
+  height: 70px;
   background-color: ${({ theme }) => theme.color.primary};
   border-bottom-right-radius: 40px;
   align-items: center;

@@ -9,7 +9,7 @@ const HomeData = [
     id: 2,
     name: "My Items",
     imgURL: require("../assets/images/home-cover-2.png"),
-    route: "My-Items",
+    route: "My Items",
   },
   {
     id: 3,

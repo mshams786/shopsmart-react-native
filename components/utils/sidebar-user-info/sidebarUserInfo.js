@@ -6,12 +6,12 @@ import {
   UserProfileWrapper,
   TextWrapper,
 } from "./sidebarUserInfo.Styles";
-import userImage from "../../../assets/images/home-cover-3.jpg";
+import userImage from "../../../assets/images/user.jpg";
 import { Image } from "react-native";
 import { Circle, Path, Svg } from "react-native-svg";
-const SidebarUserInfo = () => {
+const SidebarUserInfo = ({ style }) => {
   return (
-    <SidebarUserInfoMain>
+    <SidebarUserInfoMain style={style}>
       <UserProfileWrapper>
         <UserImageWrapper source={userImage} />
         <TextWrapper>Mr. Anderson</TextWrapper>

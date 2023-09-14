@@ -2,13 +2,17 @@ import React from "react";
 import Header from "../components/utils/header/header";
 import ShopsmartHeading from "../components/utils/shopsmart-heading/shopsmartHeading";
 import HomeItems from "../components/home-items/homeItems";
+import { ScrollView } from "react-native";
+import ListDropdown from "../components/utils/list-dropdown/listDropdown";
 
 const HomePage = ({ navigation }) => {
   return (
     <>
-      {/* <Header /> */}
+      <Header navigation={navigation} />
       <ShopsmartHeading margin="40px 0" />
-      <HomeItems navigation={navigation} />
+      <ScrollView>
+        <HomeItems navigation={navigation} />
+      </ScrollView>
     </>
   );
 };

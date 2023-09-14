@@ -1,5 +1,5 @@
-import React from "react";
-import { ImageBackground, Image } from "react-native";
+import React, { useRef, useState } from "react";
+import { ImageBackground, Image, TouchableOpacity } from "react-native";
 import {
   AlignItems,
   ImageContainer,
@@ -10,8 +10,29 @@ import {
   ImageText,
   DotSvgImage,
 } from "../ListItem/listItem-styles";
+import ListDropdown from "../list-dropdown/listDropdown";
 
-export default function ListItem({ cover, heading, paragraph, date, svgIcon }) {
+export default function ListItem({
+  cover,
+  heading,
+  paragraph,
+  date,
+  svgIcon,
+  // handleIconPress,
+  // id,
+  // showDropdown,
+}) {
+  const [popoverVisible, setPopoverVisible] = useState(false);
+  const itemRef = useRef(null);
+
+  const showPopover = () => {
+    setPopoverVisible(true);
+  };
+
+  const hidePopover = () => {
+    setPopoverVisible(false);
+  };
+
   return (
     <MainListWrapper>
       <AlignItems>
@@ -29,9 +50,12 @@ export default function ListItem({ cover, heading, paragraph, date, svgIcon }) {
             <Text2>{date}</Text2>
           </TextContainer>
         </ImageText>
-        <DotSvgImage>
-          <Image source={svgIcon} />
-        </DotSvgImage>
+        <TouchableOpacity onPress={showPopover}>{svgIcon}</TouchableOpacity>
+        <ListDropdown
+          isVisible={popoverVisible}
+          onRequestClose={hidePopover}
+          anchorView={itemRef.current}
+        />
       </AlignItems>
     </MainListWrapper>
   );

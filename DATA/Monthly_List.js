@@ -40,6 +40,14 @@ const monthlyListData = [
     date: "01/25/2022 ",
     icon: require("../assets/images/dotsitems.jpg"),
   },
+  {
+    id: 6,
+    url: require("../assets/images/product-3.jpg"),
+    heading: "June item list",
+    paragraph: "Grocery list",
+    date: "01/25/2022 ",
+    icon: require("../assets/images/dotsitems.jpg"),
+  },
 ];
 
 export default monthlyListData;

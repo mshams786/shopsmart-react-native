@@ -7,14 +7,9 @@ const screenWidth = Dimensions.get("window").width;
 export const GridContainer = styled(View)`
   flex: 1;
   align-items: center;
-  /* margin: 20px 0; */
   padding: ${screenWidth <= 380 ? "0 20px" : "0 40px"};
   flex-direction: row;
   flex-wrap: wrap;
-  row-gap: 10px;
-  /* background-color: pink; */
-  /* margin-right: 10; */
+  row-gap: 30px;
   justify-content: space-between;
-  overflow: scroll;
-  /* flex: 1; */
 `;

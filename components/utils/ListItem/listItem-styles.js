@@ -8,6 +8,7 @@ export const MainListWrapper = styled(View)`
   height: 70px;
   justify-content: center;
   border-radius: 8px;
+  position: relative;
 `;
 
 export const AlignItems = styled(View)`
