@@ -13,10 +13,6 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import { NavigationContainer } from "@react-navigation/native";
 
 import theme from "./theme";
-import HomePage from "./pages/homePage";
-import AddItems from "./pages/addItems";
-import MonthlyInventoryPage from "./pages/monthlyInventoryPage";
-import LoginSignup from "./pages/loginSignup";
 import Header from "./components/utils/header/header";
 import HomeStack from "./routes/homeStack";
 import CustomDrawer from "./components/custom-drawer/customDrawer";

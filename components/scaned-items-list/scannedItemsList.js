@@ -2,10 +2,18 @@ import React, { useState } from "react";
 import ListView from "../utils/ListView/listView";
 import monthlyListData from "../../DATA/Monthly_List";
 import ListItem from "../utils/ListItem/listItem";
-import { OptionsIcon } from "./scannedItemsList.styles";
+import { OptionsIcon } from "./scannedItemsList.styles.js";
 import { Image } from "react-native";
 
 const ScannedItemsList = () => {
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  const handleIconPress = (id) => {
+    setSelectedItem((prevSelectedItem) =>
+      prevSelectedItem === id ? null : id
+    );
+  };
+
   const svgIcon = <OptionsIcon name="options-vertical" size={24} />;
   return (
     <>
@@ -22,9 +30,9 @@ const ScannedItemsList = () => {
             paragraph={item.paragraph}
             date={item.date}
             svgIcon={svgIcon}
-            // id={item.id}
-            // showDropdown={selectedItem === item.id}
-            // handleIconPress={() => handleIconPress(item.id)}
+            showPopover={selectedItem === item.id}
+            handleIconPress={() => handleIconPress(item.id)}
+            id={item.id}
           />
         ))}
       </ListView>

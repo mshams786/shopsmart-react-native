@@ -3,7 +3,7 @@ import Header from "../components/utils/header/header";
 import ShopsmartHeading from "../components/utils/shopsmart-heading/shopsmartHeading";
 import HomeItems from "../components/home-items/homeItems";
 import { ScrollView } from "react-native";
-import ListDropdown from "../components/utils/list-dropdown/listDropdown";
+import ListDropdown from "../components/utils/list-popover/listPopover";
 
 const HomePage = ({ navigation }) => {
   return (

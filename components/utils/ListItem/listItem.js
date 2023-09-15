@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { ImageBackground, Image, TouchableOpacity } from "react-native";
+import { ImageBackground, TouchableOpacity } from "react-native";
 import {
   AlignItems,
   ImageContainer,
@@ -8,32 +8,21 @@ import {
   TextContainer,
   Text2,
   ImageText,
-  DotSvgImage,
 } from "../ListItem/listItem-styles";
-import ListDropdown from "../list-dropdown/listDropdown";
+import ListPopover from "../list-popover/listPopover";
+import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 
-export default function ListItem({
+const ListItem = ({
   cover,
   heading,
   paragraph,
   date,
   svgIcon,
-  // handleIconPress,
-  // id,
-  // showDropdown,
-}) {
-  const [popoverVisible, setPopoverVisible] = useState(false);
-  const itemRef = useRef(null);
-
-  const showPopover = () => {
-    setPopoverVisible(true);
-  };
-
-  const hidePopover = () => {
-    setPopoverVisible(false);
-  };
-
+  showPopover,
+  handleIconPress,
+}) => {
   return (
+    // <TouchableWithoutFeedback onPress={() => (showPopover = false)}>
     <MainListWrapper>
       <AlignItems>
         <ImageText>
@@ -50,13 +39,11 @@ export default function ListItem({
             <Text2>{date}</Text2>
           </TextContainer>
         </ImageText>
-        <TouchableOpacity onPress={showPopover}>{svgIcon}</TouchableOpacity>
-        <ListDropdown
-          isVisible={popoverVisible}
-          onRequestClose={hidePopover}
-          anchorView={itemRef.current}
-        />
+        <TouchableOpacity onPress={handleIconPress}>{svgIcon}</TouchableOpacity>
       </AlignItems>
+      {showPopover && <ListPopover />}
     </MainListWrapper>
+    // </TouchableWithoutFeedback>
   );
-}
+};
+export default ListItem;

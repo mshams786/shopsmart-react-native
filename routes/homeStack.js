@@ -1,9 +1,9 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import AddItems from "../pages/addItems";
-import MonthlyInventoryPage from "../pages/monthlyInventoryPage";
-import HomePage from "../pages/homePage";
-import LoginSignup from "../pages/loginSignup";
+import HomePage from "../Pages/homePage";
+import AddItems from "../Pages/addItems";
+import MonthlyInventoryPage from "../Pages/monthlyInventoryPage";
+import LoginSignup from "../Pages/loginSignup";
 import Header from "../components/utils/header/header";
 
 const Stack = createNativeStackNavigator();

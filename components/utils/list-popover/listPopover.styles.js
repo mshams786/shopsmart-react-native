@@ -5,10 +5,13 @@ export const DropdownWrapper = styled(View)`
   width: 100px;
   background-color: ${({ theme }) => theme.color.primary};
   padding: 10px;
-  /* border-radius: 4px; */
+  border-radius: 4px;
   align-items: center;
-  /* box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2); */
-  /* top: 1%; */
+  position: absolute;
+  top: 50%;
+  right: 7%;
+  z-index: 999;
+  elevation: 5;
 `;
 export const ListText = styled(Text)`
   color: ${({ theme }) => theme.color.semiWhite};
