@@ -4,12 +4,15 @@ import { StatusBar, TouchableWithoutFeedback, Keyboard } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
 import theme from "./theme";
-import HomePage from "./pages/homePage";
-import AddItems from "./pages/addItems";
-import MonthlyInventoryPage from "./pages/monthlyInventoryPage";
-import LoginSignup from "./pages/loginSignup";
-import CustomerServices from "./pages/customerServices";
-import Navigation from "./components/utils/navigation/navigation";
+// import AddItems from "./pages/addItems";
+// import MonthlyInventoryPage from "./pages/monthlyInventoryPage";
+// import LoginSignup from "./pages/loginSignup";
+// import CustomerServices from "./pages/customerServices";
+// import Navigation from "./components/utils/navigation/navigation";
+import HomePage from "./Pages/homePage";
+import LoginSignup from "./Pages/loginSignup";
+import AddItems from "./Pages/addItems";
+import MonthlyInventoryPage from "./Pages/monthlyInventoryPage";
 
 const Stack = createNativeStackNavigator();
 

@@ -15,7 +15,7 @@ export const MainContainer = styled(View)`
 `;
 export const TextLines = styled(Text)`
   font-size: 16px;
-  font-weight: 500px;
+  font-weight: 500;
 `;
 export const ErrorMassage = styled(Text)`
   margin: 0;

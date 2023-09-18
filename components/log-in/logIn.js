@@ -7,6 +7,7 @@ import { Text, TouchableOpacity } from "react-native";
 import { Formik } from "formik";
 import { object, string } from "yup";
 import { View } from "react-native";
+import SignUp from "../sign-up/signUp";
 
 const loginSchema = object({
   email: string()
@@ -16,7 +17,7 @@ const loginSchema = object({
     .required("Password must be required")
     .min(8, "At least one Uppercase, at least 8 characters"),
 });
-const LogIn = ({ handleSwitch }) => {
+const LogIn = ({ moveAnimation, handleLogin }) => {
   return (
     <Formik
       initialValues={{ email: "", password: "" }}
@@ -68,15 +69,15 @@ const LogIn = ({ handleSwitch }) => {
               width="130px"
               height="50px"
               bgColor="#06919A"
-              // onPress={handleLogin}
+              onPress={handleLogin}
             >
               Login
             </Button>
             <TextLine>
               Already have an Account?
-              <TouchableOpacity onPress={handleSwitch}>
-                <Text style={{ color: "#fff" }}>Sign In</Text>
-              </TouchableOpacity>
+              <Text style={{ color: "#fff" }} onPress={moveAnimation}>
+                Sign In
+              </Text>
             </TextLine>
           </Container>
         </BackgroundImage>
